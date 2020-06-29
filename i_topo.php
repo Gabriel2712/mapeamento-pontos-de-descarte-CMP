@@ -22,3 +22,26 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand">PONTOS DE DESCARTE EM CAMPINAS </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Mapeamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.php">Sobre o projeto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="atualizacao.php">Atualize-nos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
