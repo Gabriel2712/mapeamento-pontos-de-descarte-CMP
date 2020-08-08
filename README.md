@@ -1,3 +1,3 @@
 _MAPEAMENTO DE PONTOS DE DESCARTE DE RESÍDUOS ELETRÔNICOS E RECICLÁVEIS EM CAMPINAS_
 
-O projeto tem como objetivo fazer um mapeamento dos pontos de coletas de resíduos específicos na cidade de Campinas..
+Este projeto tem como objetivo realizar o mapeamento de pontos de coletas de resíduos eletrônicos e recicláveis na cidade de Campinas.
