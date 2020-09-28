@@ -18,8 +18,6 @@
 </head>
 
 <body>
-
-
        <div id="mapid" style="position: absolute; float: left; top: 9%; height: 90%; width: 100%;  z-index: 1;">
         <script>
         var map =  L.map('mapid').setView([-22.906288, -47.082326], 14);
@@ -32,10 +30,14 @@
         id: 'mapbox/streets-v11'
       }).addTo(map);
     
-      /*var marker = L.marker([-22.850994, -47.126070]).addTo(map);
+      /*exemplo
+      var marker = L.marker([-22.850994, -47.126070]).addTo(map);
 
 
       marker.bindPopup("Prédio VI - CAE").openPopup();      */ 
+          var marker = L.marker([-22.815030, -47.100209]).addTo(map);
+          marker.bindPopup("Resíduos: Eletrônicos e Recicláveis").openPopup();  
+
         </script>
        </div>
 
