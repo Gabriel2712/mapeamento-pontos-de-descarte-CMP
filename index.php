@@ -35,7 +35,7 @@
 
 
       marker.bindPopup("Prédio VI - CAE").openPopup();      */ 
-          var marker = L.marker([-22.802186, -47.067759]).addTo(map);
+          var marker = L.marker([-22.817304, -47.100553]).addTo(map);
           marker.bindPopup("Resíduos: Eletrônicos e Recicláveis").openPopup();  
 
         </script>
