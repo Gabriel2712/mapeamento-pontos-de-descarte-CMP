@@ -30,18 +30,13 @@
         id: 'mapbox/streets-v11'
       }).addTo(map);
     
-      /*exemplo
-      var marker = L.marker([-22.850994, -47.126070]).addTo(map);
-
-
-      marker.bindPopup("Prédio VI - CAE").openPopup();      */ 
           var marker = L.marker([-22.817304, -47.100553]).addTo(map);
           marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
           marker.bindPopup("Resíduos: Eletrônicos e Recicláveis").openPopup();  
 
           var marker = L.marker([-22.904054, -47.070088]).addTo(map);
-          marker.valueOf()._icon.style.filter = 'brightness(0.35)';
-          marker.bindPopup("Resíduos: Eletrônicos").openPopup(); 
+          marker.valueOf()._icon.style.filter = 'grayscale(100%)';
+          marker.bindPopup("Resíduos: Eletrônicos").openPopup();
 
           var marker = L.marker([-22.934027, -47.105675]).addTo(map);
           marker.valueOf()._icon.style.filter = 'hue-rotate(290deg)';
