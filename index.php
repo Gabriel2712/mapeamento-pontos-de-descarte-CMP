@@ -10,7 +10,7 @@
 <body>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://c.pxhere.com/photos/fb/5e/pollution_industrial_plant_steel_mill_blast_furnace_hut_ruhr_area_north_rhine_westphalia_factory-765856.jpg!d')">
+  <header class="masthead" style="background-image: url('https://liberal.com.br/wp-content/uploads/2020/06/campinas-aerea.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -45,7 +45,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/DescarteCmp">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -69,7 +69,7 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+          <p class="copyright text-muted">Copyright &copy; MapER 2020</p>
         </div>
       </div>
     </div>
