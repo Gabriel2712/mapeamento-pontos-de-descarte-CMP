@@ -45,7 +45,7 @@
 
           var marker = L.marker([-22.934027, -47.105675]).addTo(map);
           marker.valueOf()._icon.style.filter = 'hue-rotate(290deg)';
-          marker.bindPopup("Resíduos: Eletrônicos").openPopup(); 
+          marker.bindPopup("Resíduos: Recicláveis").openPopup(); 
 
 
         </script>
