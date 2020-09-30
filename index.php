@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Pontos de descarte</title>
+  <title>Home</title>
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-
-   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-
-    <?php include 'i_topo.php' ?>
+  <?php include 'i_topo.php' ?>
 
 </head>
 
 <body>
-       <div id="mapid" style="position: absolute; float: left; top: 9%; height: 90%; width: 100%;  z-index: 1;">
-        <script>
-        var map =  L.map('mapid').setView([-22.906288, -47.082326], 14);
-    
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 25,
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/streets-v11'
-      }).addTo(map);
-    
-      /*exemplo
-      var marker = L.marker([-22.850994, -47.126070]).addTo(map);
 
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://c.pxhere.com/photos/fb/5e/pollution_industrial_plant_steel_mill_blast_furnace_hut_ruhr_area_north_rhine_westphalia_factory-765856.jpg!d')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>O PROJETO EM SI</h1><br>
+            <h4><span class="subheading">Quais os motivos, objetivos, e razões da criação?</span></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-      marker.bindPopup("Prédio VI - CAE").openPopup();      */ 
-          var marker = L.marker([-22.817304, -47.100553]).addTo(map);
-          marker.bindPopup("Resíduos: Eletrônicos e Recicláveis").openPopup();  
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p align="justify">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSegundo o BBC News, a maioria dos brasileiros não sabem como funciona a reciclagem e não sabem quais os tipos de materiais plásticos, por exemplo, que podem ou não ser reaproveitados. Devido esta desinformação e da necessidade de se desfazer corretamente de tais dejetos produzidos tanto em âmbito familiar, quanto em âmbito social, além do desconhecimento de locais adequados para a realização destes descartes, o presente projeto teve como objetivo principal mapear pontos de descarte de materiais recicláveis e eletrônicos na cidade de Campinas, a fim de conscientizar e incentivar a população a reciclar. Levamos como propósito também, analisando por meio das nossas pesquisas, descobrir qual o real incentivo que é dado para as pessoas jogarem o lixo no local correto e separarem os materiais mais complexos (eletrônicos e recicláveis) dos menos complexos (lixo comum).
+        </p>
+        <p align="justify">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspO projeto foi desenvolvido pelos estudantes Gabriel de Araújo Cabral, Ivy Cabral Barbosa, e Rafael de Almeida, matriculados  no 3º ano do Curso técnico de informática integrado ao Ensino Médio, do Instituto Federal de Ciência, Educação e Tecnologia de São Paulo - Campus Campinas, com o auxílio de professores formados na área de TI.
+        </p>
+      </div>
+    </div>
+  </div>
 
-        </script>
-       </div>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
 
 </body>
+
 </html>
