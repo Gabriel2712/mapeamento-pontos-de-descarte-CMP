@@ -34,7 +34,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Mapeamento</a>
+            <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mapa.php">Mapeamento</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sobre.php">Sobre o projeto</a>
