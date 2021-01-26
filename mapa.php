@@ -20,7 +20,7 @@
 <body>
        <div id="mapid" style="position: absolute; float: left; top: 9%; height: 90%; width: 100%;  z-index: 1;">
          <script>
-          var map =  L.map('mapid').setView([-22.906288, -47.082326], 14);
+          var map =  L.map('mapid').setView([-22.906288, -47.082326], 13);
       
           L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
           maxZoom: 25,
@@ -46,11 +46,11 @@
             marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
             marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Jardim+Eulina/@-22.8943835,-47.1055345,15.81z/data=!4m5!3m4!1s0x94c8c7cc3599491b:0x3c37ff8cd93467ee!8m2!3d-22.8918543!4d-47.1010119'>Abrir no MAPS </a></center>").openPopup(); 
 
-            var marker = L.marker([-22.8818447921108, -47.124118004429675]).addTo(map);
+            var marker = L.marker([-22.885790485320808, -47.128180441919206]).addTo(map);
             marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
             marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Parque+Via+Norte/@-22.9303891,-47.1296112,13z/data=!4m12!1m6!3m5!1s0x94c8c7f815bd8429:0xfe63d12e39ecf6ec!2sEcoponto+Parque+Via+Norte!8m2!3d-22.8858013!4d-47.1281791!3m4!1s0x94c8c7f815bd8429:0xfe63d12e39ecf6ec!8m2!3d-22.8858013!4d-47.1281791'>Abrir no MAPS </a></center>").openPopup(); 
 
-            var marker = L.marker([-22.93371974363133, -47.10656966831355]).addTo(map);
+            var marker = L.marker([-22.93603590058311, -47.11807026833518]).addTo(map);
             marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
             marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Vila+Uni%C3%A3o/@-22.9368816,-47.1450218,13z/data=!4m8!1m2!2m1!1sEcopontoR.+L%C3%ADdia+Martins+de+Assis+-+Conj.+Hab.+Vida+Nova,+Campinas+-+SP,+13057-558!3m4!1s0x0:0xdcb13a0adaba78fa!8m2!3d-22.9360847!4d-47.1180654'>Abrir no MAPS </a></center>").openPopup(); 
 
@@ -66,6 +66,25 @@
             marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
             marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Jardim+S%C3%A3o+Gabriel/@-22.9421989,-47.0655018,13z/data=!4m8!1m2!2m1!1sEcopontoR.+L%C3%ADdia+Martins+de+Assis+-+Conj.+Hab.+Vida+Nova,+Campinas+-+SP,+13057-558!3m4!1s0x94c8ce9220e254f5:0x8755845f89a6f5e0!8m2!3d-22.9421989!4d-47.0304829'>Abrir no MAPS </a></center>").openPopup(); 
 
+            var marker = L.marker([-23.03557118489779, -47.11003417792737]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
+            marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/R.+Orlando+Bortoletti,+217+-+Jardim+Campo+Belo,+Campinas+-+SP,+13053-216/@-23.0357835,-47.110002,17z/data=!4m5!3m4!1s0x94c8caeed01d23e3:0xc2bdb6231ba01393!8m2!3d-23.035754!4d-47.1100179'>Abrir no MAPS </a></center>").openPopup(); 
+
+            var marker = L.marker([-22.8961022130058, -47.15634560952612]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
+            marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://goo.gl/maps/CoTQEHCWaoUasXT68'> Abrir no MAPS </a></center>").openPopup();
+
+            var marker = L.marker([-22.977300465770586, -47.17785899063108]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
+            marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Vida+Nova/@-22.9773088,-47.1779978,21z/data=!4m8!1m2!2m1!1secoponto!3m4!1s0x0:0xb95ebdb75bcf5480!8m2!3d-22.9773088!4d-47.177861'> Abrir no MAPS </a></center>").openPopup();
+
+            var marker = L.marker([-22.948582725107055, -47.057753918423884]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'hue-rotate(150deg)';
+            marker.bindPopup("Resíduos: Eletrônicos e Recicláveis <br><center><a href= 'https://www.google.com.br/maps/place/Ecoponto+Vila+Campos+Sales/@-22.9541044,-47.0730708,13.99z/data=!4m8!1m2!2m1!1secoponto!3m4!1s0x94c8ceb530969f59:0xcd0d31f01991f11a!8m2!3d-22.9485957!4d-47.0577498'> Abrir no MAPS </a></center>").openPopup();
+
+            var marker = L.marker([-22.92672464220023, -47.042993810763136]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'grayscale(100%)';
+            marker.bindPopup("Resíduos: Eletrônicos <br><center><a href = 'https://g.page/reversisreciclagem?share'>Abrir no MAPS </a></center").openPopup();
 
 
         </script>
