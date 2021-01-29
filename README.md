@@ -2,10 +2,15 @@ _MAPEAMENTO DE PONTOS DE DESCARTE DE RESÍDUOS ELETRÔNICOS E RECICLÁVEIS EM CA
 
 INSTRUÇÕES PARA USO LOCAL DO REPOSITÓRIO:
 	1. Instalar um software para rodar o servidor Local, recomendamos o XAMPP (https://www.apachefriends.org/pt_br/index.html);
+	
 	2. Instalar o Workbench MySQL, para a conexão e hospedagem do banco (https://dev.mysql.com/downloads/workbench/);
+	
 	3. Fazer o Download do repositório e movê-lo para: OS(C:) > xampp > htdocs;
+	
 	4. Inicializar o XAMPP (o Workbench deve estar fechado), iniciar o servidor APACHE e o MySQL;
+		
 		Executar a seguinte cláusula SQL dentro do workbench: 
+			
 			create database if not exists bd_mapeamento;
 			use bd_mapeamento;
 
