@@ -1,6 +1,7 @@
 _MAPEAMENTO DE PONTOS DE DESCARTE DE RESÍDUOS ELETRÔNICOS E RECICLÁVEIS EM CAMPINAS_
 
 INSTRUÇÕES PARA USO LOCAL DO REPOSITÓRIO:
+	
 	1. Instalar um software para rodar o servidor Local, recomendamos o XAMPP (https://www.apachefriends.org/pt_br/index.html);
 	
 	2. Instalar o Workbench MySQL, para a conexão e hospedagem do banco (https://dev.mysql.com/downloads/workbench/);
