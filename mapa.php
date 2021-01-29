@@ -86,6 +86,10 @@
             marker.valueOf()._icon.style.filter = 'grayscale(100%)';
             marker.bindPopup("Resíduos: Eletrônicos <br><center><a href = 'https://g.page/reversisreciclagem?share'>Abrir no MAPS </a></center").openPopup();
 
+            var marker = L.marker([-22.900240908888275, -47.06194180942628]).addTo(map);
+            marker.valueOf()._icon.style.filter = 'grayscale(100%)';
+            marker.bindPopup("Resíduos: Eletrônicos <br><center><a href = 'https://www.google.com/maps/dir/-22.9742562,-47.0997244/Kalunga+Kalunga+-+Av.+Andrade+Neves,+555+-+Centro,+Campinas+-+SP,+13013-160/@-22.9373968,-47.1163585,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x94c8c8bac8a826a3:0xcf18b55ac45979f7!2m2!1d-47.070087!2d-22.904072'>Abrir no MAPS </a></center").openPopup();
+
 
         </script>
        </div>
