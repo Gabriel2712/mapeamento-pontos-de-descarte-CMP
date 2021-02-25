@@ -1,7 +1,7 @@
 _MAPEAMENTO DE PONTOS DE DESCARTE DE RESÍDUOS ELETRÔNICOS E RECICLÁVEIS EM CAMPINAS_
 Link do site: http://descartecampinas.000webhostapp.com/
 
-INSTRUÇÕES PARA USO LOCAL DO REPOSITÓRIO:
+INSTRUÇÕES PARA USO LOCAL DO REPOSITÓRIO: 
 	
 	1. Instalar um software para rodar o servidor Local, recomendamos o XAMPP (https://www.apachefriends.org/pt_br/index.html);
 	
