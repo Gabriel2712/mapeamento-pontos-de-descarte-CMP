@@ -2,7 +2,7 @@
 
 	//@ $db = mysqli_connect('localhost','root','ifsp','bd_mapeamento'); ESSE É NA ESCOLA
 		
-	@ $db = mysqli_connect('localhost','root','');
+	@ $db = mysqli_connect('localhost','root','', '');
 		  if (!$db)
 		  {
 			 echo 'Não foi possível conectar ao Banco de Dados';

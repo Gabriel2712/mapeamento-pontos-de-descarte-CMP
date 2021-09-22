@@ -27,30 +27,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <center><h4><p style="color: white">Informações do visitante:</p></h4></center>
         <form name="sentMessage" id="contactForm" method="POST" action="bd_atualiza.php">
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <br><label>Nome</label>
-              <input type="text" class="form-control" placeholder="Nome" name="nome" required data-validation-required-message="Por gentileza, digite seu nome." style="background-color: white">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <br><label>Email</label>
-              <input type="email" class="form-control" placeholder="Email" name="email" required data-validation-required-message="Por gentileza, digite seu email." style="background-color: white">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <br><label>Número de telefone</label>
-              <input type="tel" class="form-control" placeholder="Telefone" name="telefonevisitante" style="background-color: white">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-
           <br><center><h4><p style="color: white">Informações sobre o ponto:</p></h4></center>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
@@ -123,7 +100,7 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; MapER 2020</p>
+          <p class="copyright text-muted">Copyright &copy; MapER 2021</p>
         </div>
       </div>
     </div>

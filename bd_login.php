@@ -10,47 +10,37 @@
 <body>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://static.pexels.com/photos/69381/nasa-earth-map-night-69381.jpeg');">
-
+  <header class="masthead" style="background-image: url('https://cdn.pixabay.com/photo/2018/10/09/09/59/mobile-phone-3734545_960_720.jpg');">
     <div class="container">
-
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading" style="padding:150px 0 100px">
-            <h1>Atualizando...</h1><br>
-            <span class="subheading">Conhece algum ponto que não está cadastrado? algum que não está mais operando? algum com informações incorretas? <p>Nos informe para podermos corrigir.</p></span>
+            <h1>Faça Login para continuar</h1><br>
           </div>
         </div>
       </div>
-
+    </div>
   </header>
 
   <?php
-
-  // dados do ponto 
-      $endereco=$_POST['endereco'];
-      $telefonep=$_POST['telefoneponto'];
-      $descarte=$_POST['tipoponto'];
-      $descricao=$_POST['descricao'];
-
+      $email= $_POST['email'];
+      $password=$_POST['password'];
 
       
     include 'conecta.php';
 
-    $query = "insert into tb_visitante(nome_vst, email_vst, tel_vst) values ('$nome', '$email','$telefonev')"; 
+    $query = "select * from tb_login where email = 'admin@admin.com' and senha = md5('admin123')"; 
+    $result = mysqli_query($db,$query);
 
-    $query2= "insert into tb_ponto(end_ponto, tel_ponto, descarte_ponto, desc_ponto) values ('$endereco', '$telefonep', '$descarte', '$descricao')";
+    $row = mysqli_num_rows($result);
 
-      $result = mysqli_query($db,$query);
-      $result2 = mysqli_query($db,$query2);
-
-      if ($result && $result2)
-     echo '<br><center>Informações sobre o ponto enviadas aos administradores!</center><br><u><center><a href="login.php"  style="color: white"> Preencher formulário sobre outro ponto.</a></center></u><br><br><br>'; 
-
-
-      else
-      echo mysqli_error($db).'<br>';
-      mysqli_close($db);
+    if($row == 1){
+      header('Location: admin.php');
+      exit();
+    }else{
+      header('Location: visitante.php');
+      exit();
+    }
     ?>
 
 

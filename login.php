@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Atualização dos pontos</title>
+  <title>Login</title>
 
   <?php include 'i_topo.php' ?>
 
@@ -10,50 +10,41 @@
 <body>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://static.pexels.com/photos/69381/nasa-earth-map-night-69381.jpeg');">
-
+  <header class="masthead" style="background-image: url('https://cdn.pixabay.com/photo/2018/10/09/09/59/mobile-phone-3734545_960_720.jpg');">
     <div class="container">
-
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading" style="padding:150px 0 100px">
-            <h1>Atualizando...</h1><br>
-            <span class="subheading">Conhece algum ponto que não está cadastrado? algum que não está mais operando? algum com informações incorretas? <p>Nos informe para podermos corrigir.</p></span>
+            <h1>Faça Login para continuar</h1><br>
           </div>
         </div>
       </div>
-
+    </div>
   </header>
 
-  <?php
-
-  // dados do ponto 
-      $endereco=$_POST['endereco'];
-      $telefonep=$_POST['telefoneponto'];
-      $descarte=$_POST['tipoponto'];
-      $descricao=$_POST['descricao'];
-
-
-      
-    include 'conecta.php';
-
-    $query = "insert into tb_visitante(nome_vst, email_vst, tel_vst) values ('$nome', '$email','$telefonev')"; 
-
-    $query2= "insert into tb_ponto(end_ponto, tel_ponto, descarte_ponto, desc_ponto) values ('$endereco', '$telefonep', '$descarte', '$descricao')";
-
-      $result = mysqli_query($db,$query);
-      $result2 = mysqli_query($db,$query2);
-
-      if ($result && $result2)
-     echo '<br><center>Informações sobre o ponto enviadas aos administradores!</center><br><u><center><a href="login.php"  style="color: white"> Preencher formulário sobre outro ponto.</a></center></u><br><br><br>'; 
-
-
-      else
-      echo mysqli_error($db).'<br>';
-      mysqli_close($db);
-    ?>
-
-
+  <!-- Main Content -->
+  <div class="customContainer">
+    <div>
+      <div class="col-lg-8 mx-auto">
+        <form name="sentMessage" id="loginForm" method="POST" action="bd_login.php">
+          <center><h2><p style="color: white">Login</p></h4></center>
+          <div>
+            <div>
+              <input type="email" class="customInput" placeholder="example@mail.com" name="email" required data-validation-required-message="Por gentileza, digite o endereço completo do ponto." style="background-color: white">
+              <p class="help-block text-danger"></p>
+            </div>
+            <div>
+              <input type="password" class="customInput" placeholder="*********" name="password" required data-validation-required-message="Por gentileza, digite o endereço completo do ponto." style="background-color: white">
+              <p class="help-block text-danger"></p>
+            </div>
+          <br>
+          <div class="form-group">
+            <center><button type="submit" class="btn btn-primary" id="loginButton">Enviar</button></center>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   </div>
 
   <hr>
@@ -65,7 +56,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/DescarteCmp">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -81,7 +72,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://github.com/Gabriel2712/mapeamento-pontos-de-descarte-CMP">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -89,12 +80,11 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+          <p class="copyright text-muted">Copyright &copy; MapER 2021</p>
         </div>
       </div>
     </div>
   </footer>
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

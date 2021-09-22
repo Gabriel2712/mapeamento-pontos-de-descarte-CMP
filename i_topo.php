@@ -12,6 +12,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -43,7 +44,7 @@
             <a class="nav-link" href="sobre.php">Sobre o projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="atualizacao.php">Atualize-nos</a>
+            <a class="nav-link" href="login.php">Atualize-nos</a>
           </li>
         </ul>
       </div>
