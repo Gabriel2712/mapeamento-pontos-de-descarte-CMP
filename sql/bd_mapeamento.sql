@@ -7,7 +7,7 @@ create table if not exists tb_usuario (
   telefone_usuario varchar(30),
   email_usuario varchar(250) NOT NULL,
   senha_usuario varchar(200) NOT NULL
-)ENGINE=InnoDB;
+);
 
 create table if not exists tb_ponto(
   id_ponto int primary key auto_increment,
@@ -18,6 +18,4 @@ create table if not exists tb_ponto(
   id_usuario int,
   FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id_usuario)
 );
-describe tb_usuario;
-show tables;
-select *from tb_usuario;
+
