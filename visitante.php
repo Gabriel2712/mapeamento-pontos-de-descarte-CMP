@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id_usuario']) && isset($_SESSION['email_usuario'] )) {
+ ?>
+
 <!DOCTYPE html>
 
 <head>
@@ -8,7 +14,6 @@
 </head>
 
 <body>
-
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('https://static.pexels.com/photos/69381/nasa-earth-map-night-69381.jpeg');">
     <div class="container">
@@ -24,29 +29,33 @@
   </header>
 
   <!-- Main Content -->
+  <div class="customContainer"> 
+    <center><h6>Bem vindo, <?php echo $_SESSION['nome_usuario']; ?></h6>
+    <h6><u><a href="logout.php" style="color: white; it">Logout</a></u></h6><center>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <form name="sentMessage" id="contactForm" method="POST" action="bd_atualiza.php">
-          <br><center><h4><p style="color: white">Informações sobre o ponto:</p></h4></center>
+          <center><h4><p style="color: white">Informações sobre o ponto:</p></h4></center>
+          <?php if (isset($_GET['success'])) { ?>
+              <p class="success"><?php echo $_GET['success']; ?></p>
+            <?php } ?>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <br><label>Endereço</label>
-              <input type="text" class="form-control" placeholder="Endereço (nº, rua, e bairro)" name="endereco" required data-validation-required-message="Por gentileza, digite o endereço completo do ponto." style="background-color: white">
-              <p class="help-block text-danger"></p>
+              <input type="text" class="form-control" placeholder="Endereço (nº, rua, e bairro)" name="end_ponto" style="background-color: white">
             </div>
 
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <br><label>Número de telefone</label>
-              <input type="tel" class="form-control" placeholder="Telefone" name="telefoneponto" required data-validation-required-message="Por gentileza, digite seu número." style="background-color: white">
-              <p class="help-block text-danger"></p>
+              <input type="tel" class="form-control" placeholder="Telefone" name="tel_ponto" style="background-color: white">
             </div>
 
             <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <br><label>Tipo de descarte</label>
-              <input type="text" class="form-control" placeholder="Tipo de descarte (recicláveis, eletrônicos, ou ambos)" name="tipoponto" required data-validation-required-message="Por gentileza, digite o tipo de descarte." style="background-color: white">
-              <p class="help-block text-danger"></p>
+              <input type="text" class="form-control" placeholder="Tipo de descarte (recicláveis, eletrônicos, ou ambos)" name="descarte_ponto" style="background-color: white">
             </div>
           </div>
 
@@ -54,8 +63,7 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <br><label>Descrição</label>
-              <textarea rows="5" class="form-control" placeholder="Descrição sobre o que necessita ser feito (adicionar, remover, ou alterar) em relação ao ponto" name="descricao" required data-validation-required-message="Por gentileza, Coloque a descrição." style="background-color: white"></textarea>
-              <p class="help-block text-danger"></p>
+              <textarea rows="5" class="form-control" placeholder="Descrição sobre o que necessita ser feito (adicionar, remover, ou alterar) em relação ao ponto" name="desc_ponto" style="background-color: white"></textarea>
             </div>
           </div>
           <br>
@@ -67,52 +75,12 @@
     </div>
   </div>
 
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="https://twitter.com/DescarteCmp">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/Gabriel2712/mapeamento-pontos-de-descarte-CMP">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; MapER 2021</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-  <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
-
+  <?php include 'i_rodape.php' ?>
+  <?php 
+    }else{
+        header("Location: login.php");
+        exit();
+    }
+  ?>
 </body>
-
 </html>

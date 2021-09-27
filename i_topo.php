@@ -44,7 +44,7 @@
             <a class="nav-link" href="sobre.php">Sobre o projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Atualize-nos</a>
+            <a class="nav-link" href="visitante.php">Atualize-nos</a>
           </li>
         </ul>
       </div>
