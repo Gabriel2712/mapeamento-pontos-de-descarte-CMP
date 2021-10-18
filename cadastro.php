@@ -4,7 +4,6 @@
   <title>Cadastro</title>
 
   <?php include 'i_topo.php' ?>
-
 </head>
 
 <body>
@@ -38,28 +37,51 @@
           <div>
             <div>
               <label>Nome completo:</label>
-                <input type="name" class="customInput" placeholder="fulano ciclano" name="nome_usuario" style="background-color: white">
+                <input type="name" class="customInput" placeholder="fulano ciclano" name="nome_usuario">
             </div>
             <br>
             <div>
               <label>Email:</label>
-                <input type="email" class="customInput" placeholder="example@mail.com" name="email_usuario" style="background-color: white">
+                <input type="email" class="customInput" placeholder="example@mail.com" name="email_usuario">
             </div>
             <br>
             <div>
               <label>Telefone:</label>
-                <input type="name" class="customInput" placeholder="(xx) xxxxx-xxxx" name="telefone_usuario" style="background-color: white">
+                <input type="name" class="customInput" placeholder="(xx) xxxxx-xxxx" name="telefone_usuario">
             </div>
             <br>
             <div>
               <label>Senha:</label>
-                <input type="password" class="customInput" placeholder="*********" name="senha_usuario"  style="background-color: white">
+                <input type="password" class="customInput" placeholder="*********" name="senha_usuario">
             </div>
             <br>
             <div>
               <label>Repita a senha:</label>
-                <input type="password" class="customInput" placeholder="*********" name="senhaconfirma_usuario" style="background-color: white">
+                <input type="password" class="customInput" placeholder="*********" name="senhaconfirma_usuario">
             </div>
+            <br>
+            <div>
+              <label>Tipo de usuário:</label><br>
+              <input type="radio" name="tipo_usuario" value="comum" style="background-color: white" onclick="javascript:myFunction()";  checked><label>&nbspComum</label>&nbsp&nbsp&nbsp
+              <input type="radio" name="tipo_usuario" value="administrador" id="administrador" style="background-color: white" onclick="javascript:myFunction();"><label>&nbspAdministrador</label>
+            </div>   
+            <div id="div_chave" style="display: none;">
+                Chave para se tornar ADM:
+                <input type="password" id="txtEmail" name="chave_administrador" />
+            </div>  
+
+              <script>
+                  function myFunction() {
+                      var yes = document.getElementById("administrador");
+                      var div_chave = document.getElementById("div_chave");
+                      if (yes.checked === true) {
+                          div_chave.style.display = "block";
+                      } else {
+                          div_chave.style.display = "none";
+                      }
+                  }
+              </script>
+
             <p align="center"><font size="2">Já possui conta? <a href ="login.php" style="color: white">Clique para voltar ao login</a></font></p>
           <div class="form-group">
             <center><button type="submit" class="btn btn-primary" id="loginButton">Cadastrar</button></center>

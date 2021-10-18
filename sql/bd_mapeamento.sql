@@ -1,3 +1,4 @@
+
 create database if not exists bd_mapeamento;
 use bd_mapeamento;
 
@@ -6,7 +7,8 @@ create table if not exists tb_usuario (
   nome_usuario varchar(200) NOT NULL,
   telefone_usuario varchar(30),
   email_usuario varchar(250) NOT NULL,
-  senha_usuario varchar(200) NOT NULL
+  senha_usuario varchar(200) NOT NULL,
+  tipo_usuario varchar(20) NOT NULL
 );
 
 create table if not exists tb_ponto(
@@ -18,4 +20,3 @@ create table if not exists tb_ponto(
   id_usuario int,
   FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id_usuario)
 );
-

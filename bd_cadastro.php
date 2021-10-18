@@ -3,20 +3,16 @@ session_start();
 include "conecta.php";
 
 if (isset($_POST['email_usuario']) && isset($_POST['senha_usuario'])
-    && isset($_POST['nome_usuario'])  && isset($_POST['senhaconfirma_usuario'])) {
+    && isset($_POST['nome_usuario'])  && isset($_POST['senhaconfirma_usuario'])
+	&& isset($_POST['tipo_usuario']) && isset($_POST['chave_administrador'])) {
 
-	function validate($data){
-       $data = trim($data);
-	   $data = stripslashes($data);
-	   $data = htmlspecialchars($data);
-	   return $data;
-	}
-
-    $nome_usuario = validate($_POST['nome_usuario']);
-	$email_usuario = validate($_POST['email_usuario']);
-	$senha_usuario = validate($_POST['senha_usuario']);
-	$senhaconfirma_usuario = validate($_POST['senhaconfirma_usuario']);
-	$telefone_usuario = validate($_POST['telefone_usuario']);
+    $nome_usuario = $_POST['nome_usuario'];
+	$email_usuario = $_POST['email_usuario'];
+	$senha_usuario = $_POST['senha_usuario'];
+	$senhaconfirma_usuario = $_POST['senhaconfirma_usuario'];
+	$telefone_usuario = $_POST['telefone_usuario'];
+	$tipo_usuario = $_POST['tipo_usuario'];
+	$chave_administrador = $_POST['chave_administrador'];
 
 
 	if (empty($email_usuario)) {
@@ -35,13 +31,16 @@ if (isset($_POST['email_usuario']) && isset($_POST['senha_usuario'])
         header("Location: cadastro.php?error=É necessário digitar seu nome!");
 	    exit();
 	}
-
 	else if($senha_usuario !== $senhaconfirma_usuario){
         header("Location: cadastro.php?error=As senhas digitadas não conferem!");
 	    exit();
-	}
-
-	else{
+	}else if($tipo_usuario == 'administrador' && empty($chave_administrador)){
+        header("Location: cadastro.php?error=É necessário colocar a chave para se tornar administrador! ");
+	    exit();
+	}else if($tipo_usuario == 'administrador' && md5($chave_administrador)!= md5('administrador123')){
+        header("Location: cadastro.php?error=A chave para se tornar administrador está incorreta! ");
+	    exit();
+	}else{
 
         $senha_usuario = md5($senha_usuario);
 
@@ -52,7 +51,7 @@ if (isset($_POST['email_usuario']) && isset($_POST['senha_usuario'])
 			header("Location: cadastro.php?error=Email já cadastrado!");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO tb_usuario(nome_usuario, telefone_usuario, email_usuario, senha_usuario) VALUES('$nome_usuario', '$telefone_usuario', '$email_usuario', '$senha_usuario')";
+           $sql2 = "INSERT INTO tb_usuario(nome_usuario, telefone_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES('$nome_usuario', '$telefone_usuario', '$email_usuario', '$senha_usuario', '$tipo_usuario')";
            $result2 = mysqli_query($db, $sql2);
            if ($result2) {
            	 header("Location: cadastro.php?success=Sua conta foi criada com sucesso");
