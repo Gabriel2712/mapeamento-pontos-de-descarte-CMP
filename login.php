@@ -7,28 +7,15 @@
 
 </head>
 
-<body>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/lixoseletronicos-atualize.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading" style="padding:150px 0 100px">
-          <<h1>ENTRE COM SUA CONTA</h1><br>
-          <h4><span class="subheading">Assim você poderá contribuir com o bom funcionamento do sistema através de sugestões e feedbacks</span></h4><br>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="customContainer">
+<body background="img/lixoseletronicos-atualize.jpg" style="background-repeat:no-repeat; opacity: 0.95; background-size: 100% 100%">
+<br>
+  <div class="customContainer" style="background-color: #1C1C1C;">
     <div>
       <div class="col-lg-8 mx-auto">
         <form name="sentMessage" id="loginForm" method="POST" action="bd_login.php">
-          <center><h4><p style="color: white">Login</p></h4></center>
-          <br>
+          <center><h4><p style="color: white">LOGIN</p></h4>
+          <p style="font-size: small; margin-top: -1.4rem">Entre com sua conta para poder contribuir conosco!</p>
+          </center>
             <?php if (isset($_GET['error'])) { ?>
      		      <p class="error"><?php echo $_GET['error']; ?></p>
      	      <?php } ?>

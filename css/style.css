@@ -1,10 +1,9 @@
 .customContainer{
-    width: 50%;
-    margin-left: 25%;
+    width: 45%;
+    position: relative;
+    margin: 5% auto 5% auto;
     border: solid white 1px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 .customInput{

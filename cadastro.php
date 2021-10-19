@@ -6,26 +6,13 @@
   <?php include 'i_topo.php' ?>
 </head>
 
-<body>
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/lixoseletronicos-atualize.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading" style="padding:150px 0 100px">
-            <h1>FAÇA O CADASTRO PARA CONTINUAR</h1><br>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="customContainer">
+<body background="img/lixoseletronicos-atualize.jpg" style="background-repeat:no-repeat; opacity: 0.95; background-size: 100% 100%">  
+  <br>
+  <div class="customContainer" style="background-color: #1C1C1C;">
     <div>
       <div class="col-lg-8 mx-auto">
         <form name="sentMessage" id="loginForm" method="POST" action="bd_cadastro.php">
-              <h4><p style="color: white" align = "center">Cadastro</p></h4>
+              <h4><p style="color: white" align = "center">CADASTRO</p></h4>
             <?php if (isset($_GET['error'])) { ?>
      		      <p class="error"><?php echo $_GET['error']; ?></p>
      	      <?php } ?>
