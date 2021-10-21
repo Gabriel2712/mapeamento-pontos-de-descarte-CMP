@@ -15,9 +15,30 @@
 
     <?php include 'i_topo.php' ?>
 
+    <style type="text/css">
+      .legenda {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+      }
+      .legenda h6, h7{
+          margin-bottom: 0.4rem;
+          color: #777;
+      }
+
+      .legenda img{
+          width: 2.1rem;
+          height: 2.5rem;
+      }
+    </style>
+
 </head>
 
 <body>
+        
        <div id="mapid" style="position: absolute; float: left; top: 9%; height: 90%; width: 100%;  z-index: 1;">
          <script>
           var map =  L.map('mapid').setView([-22.906288, -47.082326], 13);
@@ -90,14 +111,26 @@
             marker.valueOf()._icon.style.filter = 'grayscale(100%)';
             marker.bindPopup("Resíduos: Eletrônicos <br><center><a href = 'https://www.google.com/maps/dir/-22.9742562,-47.0997244/Kalunga+Kalunga+-+Av.+Andrade+Neves,+555+-+Centro,+Campinas+-+SP,+13013-160/@-22.9373968,-47.1163585,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x94c8c8bac8a826a3:0xcf18b55ac45979f7!2m2!1d-47.070087!2d-22.904072'>Abrir no MAPS </a></center").openPopup();
 
-
+            var legenda = L.control();
+            legenda.onAdd = function (map) {
+              this._div = L.DomUtil.create('div', 'legenda');
+              this.update();
+              return this._div;
+            };
+          
+            legenda.update = function () {
+                this._div.innerHTML = '<h6>Resíduos permitidos: </h6>'+
+                                      '<b><img src = "img/marcador_vermelho.png"><h7> Eletrônicos e recicláveis<br>' +
+                                      '<img src = "img/marcador_verde.png"><h7> Recicláveis</h7><br>' + 
+                                      ' <img src = "img/marcador_cinza.png"><h7> Eletrônicos<h7><br></b>'
+            };
+            legenda.addTo(map);
+           
         </script>
        </div>
-  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 
 </body>
