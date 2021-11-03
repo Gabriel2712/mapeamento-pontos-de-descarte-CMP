@@ -1,9 +1,11 @@
 .customContainer{
-    width: 45%;
+    width: 90%;
+    padding-left: 8%;
+    padding-right: 8%;
     position: relative;
-    margin: 5% auto 5% auto;
+    margin: 15% auto auto auto;
     border: solid white 1px;
-    border-radius: 20px;
+    border-radius: 3%;
 }
 
 .customInput{
@@ -29,11 +31,69 @@
     margin: 20px auto;
  }
 
- .success {
+.success {
     background: #D4EDDA;
     color: #40754C;
     padding: 10px;
     width: 95%;
     border-radius: 5px;
     margin: 20px auto;
+}
+.row {
+    margin: 0;
+}
+a:active {
+    color: yellow;
+  }
+#barra_lateral_adm{
+    width: 70%;
+    height: 27rem;
+    margin-left: 18%;
+    margin-right: 12%;
+    margin-top: -1.3rem;
+    line-height: 2;
+    font-family: arial;
+    font-size: 1.0em;
+    text-decoration: underline;
+    border: 0.2rem solid black;
+    background-color: white;
+    display: block;
  }
+#conteudo_adm{
+    padding: 1%;
+    overflow: scroll;
+    margin-top: -1.3rem;
+    margin-right: 7%;
+    margin-left: 0;
+    width: 93%;
+    height: 27rem;
+    color: black;
+    background-color: white ;
+    font-family: arial;
+    font-size: 1rem;
+    border: 0.2rem solid black;
+}
+#topo_adm{
+    text-align: center;
+    width: 100vw;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0; 
+    margin-right: 0;          
+    margin-top: 4rem;
+    position: relative;    						
+    font-family: arial;			
+    font-size: 1.7rem;					
+    background-color:  white;		
+    color: black;	
+    border: 0.2rem solid black;			
+}
+#user{
+    text-align: center;
+    font-size: medium;
+    border: 0.2rem solid white; 
+    width: 30rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10rem;
+}

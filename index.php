@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-
 <head>
   <title>Home</title>
 
-  <?php include 'i_topo.php' ?>
-
+  <?php include 'include/i_topo.php' ?>
 </head>
-
 <body>
-
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/campinas-home.jpg')">
     <div class="overlay"></div>
@@ -23,20 +19,19 @@
       </div>
     </div>
   </header>
-
   <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p align="justify">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTendo como objetivo geral deste trabalho produzir um meio para consulta de pontos de descarte de resíduos recicláveis e eletrônicos na cidade de Campinas, embasado em pesquisas e considerando a tamanha necessidade do descarte correto destes dejetos citados, foi criado este site, a fim de auxiliar as pessoas a encontrarem locais de descarte de resíduos específicos (Eletrônicos e Recicláveis) na cidade de Campinas.  
+        <p align="justify" style="text-indent: 4rem;">Tendo como objetivo geral deste trabalho produzir um meio para consulta de pontos de descarte de resíduos recicláveis e eletrônicos na cidade de Campinas, embasado em pesquisas e considerando a tamanha necessidade do descarte correto destes dejetos citados, foi criado este site, a fim de auxiliar as pessoas a encontrarem locais de descarte de resíduos específicos (Eletrônicos e Recicláveis) na cidade de Campinas.  
         </p>
-        <p align="justify">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuer nos auxiliar nesta causa? Envie novos pontos que podemos adicionar no nosso site, assim podemos nos manter sempre atualizados. Vá até a aba <a href="login.php" style="color: white">"Atualize-nos"</a> e envie sua proposta, com certeza será uma contribuição enorme para nós e para o meio ambiente!
+        <p align="justify" style="text-indent: 4rem;">Quer nos auxiliar nesta causa? Envie novos pontos que podemos adicionar no nosso site, assim podemos nos manter sempre atualizados. Vá até a aba <a href="login.php" style="color: white">"Atualize-nos"</a> e envie sua proposta, com certeza será uma contribuição enorme para nós e para o meio ambiente!
         </p>
       </div>
     </div>
   </div>
-
-  <?php include 'i_rodape.php' ?>
+  <hr>
+  <?php include 'include/i_rodape.php' ?>
 
 </body>
 
