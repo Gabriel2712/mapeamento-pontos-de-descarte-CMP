@@ -36,9 +36,11 @@
                     echo stripslashes($row[3]);
                     echo '<br />Data de cadastro: ';
                     echo stripslashes($row[5]);
-                    $total_sugestoes =  mysqli_num_rows(mysqli_query($db,"select * from tb_sugestao where id_usuario = $row[0]"));
-                    echo '<br />Total de sugestões: ';
-                    echo ($total_sugestoes);
+                    if ($row['tipo_usuario']=='comum'){
+                      $total_sugestoes =  mysqli_num_rows(mysqli_query($db,"select * from tb_sugestao where id_usuario = $row[0]"));
+                      echo '<br />Total de sugestões: ';
+                      echo ($total_sugestoes);
+                    }
                     echo '<hr><br>';
               }
               mysqli_close($db);
