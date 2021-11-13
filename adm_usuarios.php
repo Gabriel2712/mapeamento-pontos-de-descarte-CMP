@@ -22,12 +22,12 @@
 					</select><br/>
 					Digite o valor de busca:
 					<input name="chave" type="text"><br/>
-					<input type="submit" value="Enviar">
+					<input type="submit" value="Pesquisar">
 				</form>
 				<br><br>
 				Dicas:<br>
 				- Caso escolher o critério para exibir todos os usuários, deixe o campo de busca em branco; <br>
-				- Caso escolher o critério "permissão de usuário", escreva no campo "comum" ou "administrador";<br>
+				- Caso escolher o critério "permissão de usuário", escreva no campo: "comum" ou "administrador";<br>
 				- Caso escolher o critério por data de cadastro, digitar com o seguinte formato "aaaa-mm-dd".
 
 			</div>

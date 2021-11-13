@@ -17,19 +17,31 @@
 					$query = "select * from tb_sugestao";
 					$result = mysqli_query($db,$query);
 					$num_results = mysqli_num_rows($result);
-					echo '<br>NÚMERO TOTAL DE SUGESTÕES: '.$num_results. "<br>";
-					echo '--------------------------------------------------------------';
+					echo '<hr>';
+					echo '<b>Total de sugestões recebidas</b>: '.$num_results;
+					$query = "select * from tb_sugestao where status_sugestao ='em análise'";
+					$result = mysqli_query($db,$query);
+					$num_results = mysqli_num_rows($result);
+					echo '<br>Para análise: '.$num_results;
+					$query = "select * from tb_sugestao where status_sugestao ='aceita'";
+					$result = mysqli_query($db,$query);
+					$num_results = mysqli_num_rows($result);
+					echo '<br>Aceitas: '.$num_results;
+					$query = "select * from tb_sugestao where status_sugestao ='recusada'";
+					$result = mysqli_query($db,$query);
+					$num_results = mysqli_num_rows($result);
+					echo '<br>Recusadas: '.$num_results;
+					echo '<hr>';
 					$query = "select * from tb_usuario where tipo_usuario='comum'";
 					$result = mysqli_query($db,$query);
 					$num_results = mysqli_num_rows($result);
-					echo '<br>NÚMERO TOTAL DE USUÁRIOS COMUNS: '.$num_results. "<br>";
-					echo '--------------------------------------------------------------';
+					echo '<b>Total de usuários comuns inscritos</b>: '.$num_results;
+					echo '<hr>';
 					$query = "select * from tb_usuario where tipo_usuario='administrador'";
 					$result = mysqli_query($db,$query);
 					$num_results = mysqli_num_rows($result);
-					echo '<br>NÚMERO TOTAL DE ADMINISTRADORES: '.$num_results. "<br>";
-					echo '--------------------------------------------------------------';
-					
+					echo '<b>Total de usuários administradores inscritos</b>: '.$num_results;
+					echo '<hr>';
 					mysqli_close($db);
 				?>
 			</div>

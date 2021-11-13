@@ -46,8 +46,10 @@
                       echo stripslashes($row[3]);
                       echo '<br />Descrição da sugestão: ';
                       echo stripslashes($row[4]);
-                      echo '<br />Data de envio: ';
+                      echo '<br />Status da sugestão: ';
                       echo stripslashes($row[5]);
+                      echo '<br />Data de envio: ';
+                      echo stripslashes($row[6]);
                       echo '<hr>';
                   }
                   mysqli_close($db);
@@ -60,31 +62,33 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <form name="sentMessage" id="contactForm" method="POST" action="bd_usuario_sugestao.php">
               <center><h4>Insira as informações para uma nova sugestão: </h4></center>
-              <?php if (isset($_GET['success'])) { ?>
+                <?php if (isset($_GET['success'])) { ?>
                   <p class="success"><?php echo $_GET['success']; ?></p>
-                <?php } ?>
+                <?php }else if (isset($_GET['error'])){ ?>
+                  <p class="error"><?php echo $_GET['error']; ?></p>
+                  <?php } ?>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <br><label>Endereço</label>
-                  <input type="text" class="form-control" placeholder="Endereço do ponto (nº, rua, e bairro)" name="end_ponto" style="background-color: white">
+                  <input type="text" class="form-control" placeholder="Endereço do ponto (nº, rua, e bairro)" name="end_ponto" style="background-color: white" required>
                 </div>
 
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <br><label>Número de telefone do local</label>
-                  <input type="tel" class="form-control" placeholder="Telefone" name="tel_ponto" style="background-color: white">
+                  <input type="tel" class="form-control" placeholder="Telefone" name="tel_ponto" style="background-color: white" required>
                 </div>
 
                 <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <br><label>Tipo de descarte</label>
-                  <input type="text" class="form-control" placeholder="Resíduos permitidos para descarte (recicláveis, eletrônicos, ou ambos)" name="descarte_ponto" style="background-color: white">
+                  <input type="text" class="form-control" placeholder="Resíduos permitidos para descarte (recicláveis, eletrônicos, ou ambos)" name="descarte_ponto" style="background-color: white" required>
                 </div>
               </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <br><label>Descrição</label>
-                  <textarea rows="5" class="form-control" placeholder="Descrição sobre o que necessita ser feito (adicionar, remover, ou alterar) em relação ao ponto" name="desc_ponto" style="background-color: white"></textarea>
+                  <textarea rows="5" class="form-control" placeholder="Descrição sobre o que necessita ser feito (adicionar, remover, ou alterar) em relação ao ponto" name="desc_sugestao" style="background-color: white" required></textarea>
                 </div>
               </div>
               <br>

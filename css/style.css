@@ -43,7 +43,7 @@
     margin: 0;
 }
 a:active {
-    color: yellow;
+    color: rgb(0, 195, 255);
   }
 #barra_lateral_adm{
     width: 70%;
