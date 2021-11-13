@@ -15,6 +15,7 @@
 				Selecione um criterio de pesquisa: 
 					<select name="criterio">
 					<option value="tudo">Exibir todas as sugestões</option>
+					<option value="status_sugestao">Status da sugestão</option>
 					<option value="id_sugestao">ID de uma sugestão</option>
 					<option value="id_usuario">ID de um usuário</option>
 					<option value="nome_usuario">Nome de usuário</option>
@@ -22,12 +23,13 @@
 					</select><br/>
 					Digite o valor de busca:
 					<input name="chave" type="text"><br/>
-					<input type="submit" value="Enviar">
+					<input type="submit" value="Pesquisar">
 				</form>
 				<br><br>
 				Dicas:<br>
 				- Caso escolher o critério para exibir todas as sugestões, deixe o campo de busca em branco; <br>
-				- Caso escolher o critério por data da sugestão, digitar com o seguinte formato "aaaa-mm-dd".
+				- Caso escolher o critério de status da sugestão, escreva uma das três possibilidades da seguinte maneira: "em análise, aceita, ou recusada"; <br>
+				- Caso escolher o critério de data da sugestão", digitar com o seguinte formato "aaaa-mm-dd".
 			</div>
 		</div>
     </div>
