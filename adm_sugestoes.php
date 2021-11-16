@@ -18,8 +18,7 @@
 					<option value="status_sugestao">Status da sugestão</option>
 					<option value="id_sugestao">ID de uma sugestão</option>
 					<option value="id_usuario">ID de um usuário</option>
-					<option value="nome_usuario">Nome de usuário</option>
-					<option value="data_sugestão">Data de uma sugestão</option>
+					<option value="data_sugestao">Data de uma sugestão</option>
 					</select><br/>
 					Digite o valor de busca:
 					<input name="chave" type="text"><br/>

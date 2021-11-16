@@ -23,7 +23,7 @@
                 $result = mysqli_query($db, $query);
                 
                 if(mysqli_affected_rows($db)>0){
-                echo 'Informação alterada com sucesso<br><u><a href= "adm_sugestoes.php" style="color: darkblue">Voltar<a></u>';
+                echo 'Informação alterada com sucesso<br><u><a href= "adm_sugestoes.php" style="color: darkblue">Voltar</a></u>';
                 }
                 mysqli_close($db);
             ?>

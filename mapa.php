@@ -121,20 +121,6 @@
           };
           legenda.addTo(map);
           
-          if (navigator.geolocation)
-            {
-            navigator.geolocation.getCurrentPosition(showPosition);
-            }
-          else{x.innerHTML="Geolocalização não é suportada nesse browser.";}
-        
-          function showPosition(position)
-          {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            var marker = L.marker([latitude, longitude]).addTo(map);
-            marker.bindPopup("<center>LOCALIZAÇÃO ATUAL (aproximada)</center>Com intuito de te ajudar a achar o ponto mais próximo").openPopup();
-          }
-          
       </script>
     </div>
       <script src="vendor/jquery/jquery.min.js"></script>
