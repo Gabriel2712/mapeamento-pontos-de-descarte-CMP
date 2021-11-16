@@ -33,35 +33,18 @@
           </div>
           <div class="col-8">
             <div id="conteudo_adm" style="margin-left: 4%;">
-            <center><h6>MINHAS SUGESTÕES</h6></center>
-              <?php
-                  include 'include/conecta.php';
-                  $query = "select * from tb_sugestao where id_usuario = ".$_SESSION['id_usuario'];
-                  $result = mysqli_query($db,$query);
-                  $num_results = mysqli_num_rows($result);
-                  echo 'NÚMERO DE SUGESTÕES SUBMETIDAS: '.$num_results."<br><hr>";
+                <?php
+                    include 'include/conecta.php';
+                    include 'include/busca_pesquisa.php';
 
-                  for ($i=0; $i <$num_results; $i++)
-                  {
-                      $row = mysqli_fetch_array($result);
-                      echo 'ID da sugestão: ';
-                      echo stripslashes($row[0]);
-                      echo '<br>Endereço do ponto: ';
-                      echo stripslashes($row[1]);
-                      echo '<br />Telefone do ponto: ';
-                      echo stripslashes($row[2]);
-                      echo '<br />Tipo de descarte atual: ';
-                      echo stripslashes($row[3]);
-                      echo '<br />Descrição da sugestão: ';
-                      echo stripslashes($row[4]);
-                      echo '<br />Status da sugestão: ';
-                      echo stripslashes($row[5]);
-                      echo '<br />Data de envio: ';
-                      echo stripslashes($row[6]);
-                      echo '<hr>';
-                  }
-                  mysqli_close($db);
-              ?>
+                    $query = "UPDATE tb_usuario SET $criterio = '$chave' WHERE id_usuario = ".$_SESSION['id_usuario'];
+                    $result = mysqli_query($db, $query);
+                    
+                    if(mysqli_affected_rows($db)>0){
+                    echo 'Informação alterada com sucesso <u><a href= "usuario_dados_pessoais.php" style="color: darkblue">Voltar</a></u>';
+                    }
+                    mysqli_close($db);
+                ?>
             </div><br><br>
           </div>
         </div>

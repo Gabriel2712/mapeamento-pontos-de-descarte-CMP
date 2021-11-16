@@ -33,35 +33,43 @@
           </div>
           <div class="col-8">
             <div id="conteudo_adm" style="margin-left: 4%;">
-            <center><h6>MINHAS SUGESTÕES</h6></center>
-              <?php
+            <center><h6>MEUS DADOS PESSOAIS</h6></center>
+                <?php
                   include 'include/conecta.php';
-                  $query = "select * from tb_sugestao where id_usuario = ".$_SESSION['id_usuario'];
+
+                  $query = "select * from tb_usuario where id_usuario = ".$_SESSION['id_usuario'];      
                   $result = mysqli_query($db,$query);
                   $num_results = mysqli_num_rows($result);
-                  echo 'NÚMERO DE SUGESTÕES SUBMETIDAS: '.$num_results."<br><hr>";
-
-                  for ($i=0; $i <$num_results; $i++)
-                  {
+  
                       $row = mysqli_fetch_array($result);
-                      echo 'ID da sugestão: ';
+                      echo 'ID do usuário: ';
                       echo stripslashes($row[0]);
-                      echo '<br>Endereço do ponto: ';
+                      echo '<br>Nome: ';
                       echo stripslashes($row[1]);
-                      echo '<br />Telefone do ponto: ';
-                      echo stripslashes($row[2]);
-                      echo '<br />Tipo de descarte atual: ';
-                      echo stripslashes($row[3]);
-                      echo '<br />Descrição da sugestão: ';
-                      echo stripslashes($row[4]);
-                      echo '<br />Status da sugestão: ';
-                      echo stripslashes($row[5]);
-                      echo '<br />Data de envio: ';
+                      echo '<br>Permissão do usuario: ';
                       echo stripslashes($row[6]);
+                      echo '<br />Telefone: ';
+                      echo stripslashes($row[2]);
+                      echo '<br />Email: ';
+                      echo stripslashes($row[3]);
+                      echo '<br />Data de cadastro: ';
+                      echo stripslashes($row[5]);
                       echo '<hr>';
-                  }
-                  mysqli_close($db);
-              ?>
+                    mysqli_close($db);
+                ?>
+                <center><h6>ALTERAR DADOS</h6></center>
+				<form action="bd_usuario_altera.php" method="post">
+				Selecione uma informação a ser alterada: 
+					<select name="criterio">
+					<option value="nome_usuario">Nome</option>
+					<option value="telefone_usuario">Telefone</option>
+					<option value="email_usuario">Email</option>
+					<option value="senha_usuario">Senha</option>
+					</select><br/>
+					Digite um novo valor para o campo:
+					<input name="chave" type="text"><br/>
+					<input type="submit" value="Alterar">
+				</form>
             </div><br><br>
           </div>
         </div>
