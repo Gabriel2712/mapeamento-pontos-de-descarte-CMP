@@ -55,7 +55,7 @@ include "include/conecta.php";
 			$sql2 = "INSERT INTO tb_usuario(nome_usuario, telefone_usuario, email_usuario, senha_usuario, data_cadastro, tipo_usuario) VALUES('$nome_usuario', '$telefone_usuario', '$email_usuario', '$senha_usuario', '$data_atual', '$tipo_usuario')";
 			$result2 = mysqli_query($db, $sql2);
 			if ($result2) {
-				header("Location: cadastro.php?success=Sua conta foi criada com sucesso!");
+				header("Location: login.php?success=Conta criada com sucesso! Faça o login");
 				exit();
 			}else {
 					header("Location: cadastro.php?error=Erro desconhecido!");
