@@ -7,52 +7,51 @@
   <?php include 'include/i_topo.php' ?>
 </head>
 <body>
-  <!-- Page Header -->
-  <header class="masthead" style="background-color: #708090; margin:0">
       <div class="row"> 
           <div id="topo_adm">
-            <b>Página do usuário</b>
-          </div><br>
+            <h4>PAINEL DO USUÁRIO</h4>
+          </div>
         </div>
       </div>
       <div class="row justify-content-md-center">
         <div id="user">
-          <h6>Usuário: <?php echo $_SESSION['nome_usuario']; ?>
-            <u><a href="logout.php" style="color: white"><br>SAIR DA CONTA</a></u></h6>
+          <h6>Nome: <?php echo $_SESSION['nome_usuario']; ?>
+            <u><a href="logout.php"><br>SAIR DA CONTA</a></u></h6>
 		    </div>
       </div>
-      <div class="container">
-        <div class="row">     
-          <div class="col">
-            <div id="barra_lateral_adm">
-              <ul>
-                <li style="margin-top: 1rem;"> <a href= "usuario_pagina_inicial.php">Minhas sugestões</a> </li><hr>
-                <li><a href = "usuario_dados_pessoais.php">Dados da conta</a></li><hr>
-              </ul>
-            </div>
-          </div>
-          <div class="col-8">
-            <div id="conteudo_adm" style="margin-left: 4%;">
-                <?php
-                    include 'include/conecta.php';
-                    include 'include/busca_pesquisa.php';
-
-                    $query = "UPDATE tb_usuario SET $criterio = '$chave' WHERE id_usuario = ".$_SESSION['id_usuario'];
-                    $result = mysqli_query($db, $query);
-                    
-                    if(mysqli_affected_rows($db)>0){
-                    echo 'Informação alterada com sucesso <u><a href= "usuario_dados_pessoais.php" style="color: darkblue">Voltar</a></u>';
-                    }
-                    mysqli_close($db);
-                ?>
-            </div><br><br>
+      <div class="row">     
+        <div class="col">
+          <div id="barra_lateral_user">
+            <ul>
+              <li style="margin-top: 1rem;"> <a href= "usuario_pagina_inicial.php">Minhas sugestões</a> </li><hr>
+              <li><a href = "usuario_dados_pessoais.php">Dados da conta</a></li><hr>
+            </ul>
           </div>
         </div>
+        <div class="col-lg-9 col-md-10 mx-auto">
+          <div id="conteudo_adm">
+            <div id="scroll">
+              <?php
+                  include 'include/conecta.php';
+                  include 'include/busca_pesquisa.php';
+
+                  $query = "UPDATE tb_usuario SET $criterio = '$chave' WHERE id_usuario = ".$_SESSION['id_usuario'];
+                  $result = mysqli_query($db, $query);
+                  
+                  if(mysqli_affected_rows($db)>0){
+                  echo 'Informação alterada com sucesso!<br> <u><a href= "usuario_dados_pessoais.php" style="color: darkblue">Voltar</a></u>';
+                  }
+                  mysqli_close($db);
+              ?>
+            </div>
+          </div><br><br>
+        </div>
       </div>
+      <hr>
       <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <form name="sentMessage" id="contactForm" method="POST" action="bd_usuario_sugestao.php">
-              <center><h4>Insira as informações para uma nova sugestão: </h4></center>
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <form name="sentMessage" id="contactForm" method="POST" action="bd_usuario_sugestao.php">
+            <center><h4>FORMULÁRIO PARA ENVIO DE NOVA SUGESTÃO: </h4></center>
                 <?php if (isset($_GET['success'])) { ?>
                   <p class="success"><?php echo $_GET['success']; ?></p>
                 <?php }else if (isset($_GET['error'])){ ?>
@@ -90,6 +89,6 @@
             <br><br> 
           </div>
         </div>
-  </header>
 </body>
+  <?php include 'include/i_rodape.php' ?>
 </html>

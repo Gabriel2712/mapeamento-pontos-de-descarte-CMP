@@ -4,8 +4,9 @@
     padding-right: 8%;
     position: relative;
     margin: 15% auto auto auto;
-    border: solid white 1px;
-    border-radius: 3%;
+    border: solid white 0.13rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.35rem 0.6rem 0 rgb(0, 0, 0);
 }
 
 .customInput{
@@ -44,56 +45,135 @@
 }
 a:active {
     color: rgb(0, 195, 255);
-  }
+}
+#cadastro{
+    font-size: medium;
+    margin-top: -1.5rem;
+}
+
 #barra_lateral_adm{
-    width: 70%;
+    width: 85%;
     height: 27rem;
-    margin-left: 18%;
-    margin-right: 12%;
-    margin-top: -1.3rem;
+    margin-left: 11%;
+    margin-right: 4%;
     line-height: 2;
     font-family: arial;
     font-size: 1.0em;
     text-decoration: underline;
-    border: 0.2rem solid black;
+    border: 0.17rem solid black;
     background-color: white;
+    box-shadow: 0 0.25rem 0.4rem 0 rgb(0, 0, 0);
+    transition: 0.3s;
+    border-radius: 0.85rem;
     display: block;
  }
+ #barra_lateral_user{
+    width: 85%;
+    height: 27rem;
+    margin-left: 11%;
+    margin-right: 4%;
+    line-height: 2;
+    font-family: arial;
+    font-size: 1.0em;
+    text-decoration: underline;
+    border: 0.17rem solid black;
+    background-color: white;
+    box-shadow: 0 0.25rem 0.4rem 0 rgb(0, 0, 0);
+    transition: 0.3s;
+    border-radius: 0.85rem;
+    display: block;
+ }
+ #scroll{
+     overflow: auto;
+     height: 25.4rem;
+ }
 #conteudo_adm{
-    padding: 1%;
-    overflow: scroll;
-    margin-top: -1.3rem;
-    margin-right: 7%;
-    margin-left: 0;
+    margin-right: 5%;
+    margin-left: 2%;
+    padding-top: 1%;
     width: 93%;
     height: 27rem;
     color: black;
     background-color: white ;
     font-family: arial;
     font-size: 1rem;
-    border: 0.2rem solid black;
+    border: 0.17rem solid black;
+    box-shadow: 0 0.25rem 0.4rem 0 rgb(0, 0, 0);
+    transition: 0.3s;
+    border-radius: 0.85rem;
 }
+
 #topo_adm{
     text-align: center;
     width: 100vw;
-    padding: 0;
+    padding-top: 0.4rem;
     margin-left: 0;
-    margin-bottom: 0; 
+    margin-bottom: 1.3rem; 
     margin-right: 0;          
-    margin-top: 4rem;
+    margin-top: 3.7rem;
     position: relative;    						
-    font-family: arial;			
-    font-size: 1.7rem;					
-    background-color:  white;		
-    color: black;	
-    border: 0.2rem solid black;			
+    font-family: sans-serif, arial;
+    font-weight: bold;							
+    background-color:  rgba(7, 72, 42, 0.515);
+    color: white;
+    border: 0.07rem solid black;
+    box-shadow: 0.1rem 0 0.3rem 0 rgb(0, 0, 0);				
 }
 #user{
+    padding: 0.2rem;
+    color: #212529;
+    background-color: white;
     text-align: center;
     font-size: medium;
-    border: 0.2rem solid white; 
+    border: 0.17rem solid black; 
     width: 30rem;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.3rem;
     border-radius: 10rem;
+    box-shadow: 0 0.15rem 0.3rem 0 rgb(0, 0, 0);
+}
+a:hover {
+        color: #0085a1;
+}
+@media (max-width: 600px){
+    #mapid{
+        margin-top: 2.8rem;
+    }
+    #topo_adm{
+        margin-top: 7rem;
+    }
+    #barra_lateral_user{
+        height: 8.5rem;
+        margin:0;
+        margin-bottom: 1%;
+        width: 100%;
+        font-size: medium;
+        font-weight: bold;
+    }
+    #barra_lateral_adm{
+        height: 20.5rem;
+        font-size: medium;
+        font-weight: bold;
+        margin:0;
+        margin-bottom: 1%;
+        width: 100%;
+    }
+    #conteudo_adm{
+        width: 100%;
+        margin: 0;
+        height: 24rem;
+    }
+    #scroll{
+    margin-top: 0.5rem;
+       height: 22rem;
+    }
+    #login{
+        margin-top: 3rem;
+        width: 100%;
+        font-size: medium;
+    }
+    #cadastro{
+        margin-top: 3rem;
+        width: 100%;
+        font-size: medium;
+    }
 }
