@@ -13,7 +13,7 @@
   ?>
 </head>
 <body background="img/lixoseletronicos-atualize.jpg" style="background-repeat:no-repeat; opacity: 0.95; background-size: 100% 100%">
-    <div>
+  <div id="login">
     <div class="row">
       <div class="col-lg-6 mx-auto">
         <div class="customContainer" style="background-color: #1C1C1C;">
@@ -23,6 +23,9 @@
             </center>
               <?php if (isset($_GET['error'])) { ?>
                 <p class="error"><?php echo $_GET['error']; ?></p>
+              <?php } ?>
+              <?php if (isset($_GET['success'])) { ?>
+                <p class="success"><?php echo $_GET['success']; ?></p>
               <?php } ?>
             <div>
               <div>
@@ -43,7 +46,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </body>   
     <?php include 'include/i_rodape.php' ?>
 </html>
