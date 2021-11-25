@@ -4,7 +4,7 @@
     $chave = trim($chave);
     if ($criterio != 'tudo' && !$chave)
     {
-        echo 'Impossivel realizar pesquisa...faltam dados';
+        echo 'Impossível realizar a pesquisa! Volte e preencha o campo novamente.';
         exit;
     }
     $criterio = addslashes($criterio);

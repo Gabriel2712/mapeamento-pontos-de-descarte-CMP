@@ -30,7 +30,7 @@
     </style>
     <?php include 'include/i_topo.php' ?>
 </head>
-<body>      
+<body>  
     <div id="mapid" style="position: absolute; float: left; top: 9%; height: 91%; width: 100%;  z-index: 1;">
       <script>
         var map =  L.map('mapid').setView([-22.906288, -47.082326], 12);
